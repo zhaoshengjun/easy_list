@@ -22,20 +22,7 @@ class _MyAppState extends State<MyApp> {
           title: Text('EasyList'),
         ),
         body: Column(
-          children: <Widget>[
-            Container(
-              margin: EdgeInsets.all(5.0),
-              child: RaisedButton(
-                onPressed: () {
-                  setState(() {
-                    _products.add('Advanced Food Tester');
-                  });
-                  print(_products);
-                },
-                child: Text('Add Product'),
-              ),
-            ),
-          ],
+          children: <Widget>[],
         ),
       ),
     );
