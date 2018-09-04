@@ -35,14 +35,6 @@ class _MyAppState extends State<MyApp> {
                 child: Text('Add Product'),
               ),
             ),
-            Column(
-                children: _products
-                    .map((el) => Card(
-                          child: Column(
-                            children: <Widget>[Image.asset('assets/food.jpg'), Text(el)],
-                          ),
-                        ))
-                    .toList())
           ],
         ),
       ),
