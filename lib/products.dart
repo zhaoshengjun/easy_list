@@ -14,13 +14,13 @@ class Products extends StatelessWidget {
   }
 
   Widget _buildProductList() {
-    Widget productCard;
+    Widget productCard = Container();
     if (products.length > 0) {
       productCard = ListView.builder(
         itemBuilder: _buildProductItem,
         itemCount: products.length,
       );
-    } 
+    }
     return productCard;
   }
 
