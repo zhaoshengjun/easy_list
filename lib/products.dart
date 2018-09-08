@@ -8,7 +8,13 @@ class Products extends StatelessWidget {
   Widget _buildProductItem(BuildContext context, int index) {
     return Card(
       child: Column(
-        children: <Widget>[Image.asset('assets/food.jpg'), Text(products[index])],
+        children: <Widget>[
+          Image.asset('assets/food.jpg'),
+          Text(products[index]),
+          ButtonBar(
+            children: <Widget>[FlatButton(child: Text('Details'), onPressed: () => {})],
+          )
+        ],
       ),
     );
   }
