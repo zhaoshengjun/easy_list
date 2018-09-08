@@ -12,6 +12,7 @@ class Products extends StatelessWidget {
           Image.asset('assets/food.jpg'),
           Text(products[index]),
           ButtonBar(
+            alignment: MainAxisAlignment.center,
             children: <Widget>[FlatButton(child: Text('Details'), onPressed: () => {})],
           )
         ],
