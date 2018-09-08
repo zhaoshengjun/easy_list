@@ -13,11 +13,14 @@ class ProductPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             Image.asset('assets/food.jpg'),
-            Text('Details'),
-            RaisedButton(
-              child: Text('Back'),
-              onPressed: () => Navigator.pop(context),
-            )
+            Container(padding: EdgeInsets.all(10.0), child: Text('Details')),
+            Container(
+                padding: EdgeInsets.all(10.0),
+                child: RaisedButton(
+                  color: Theme.of(context).accentColor,
+                  child: Text('Back'),
+                  onPressed: () => Navigator.pop(context),
+                ))
           ],
         )));
   }
