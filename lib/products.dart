@@ -23,7 +23,9 @@ class Products extends StatelessWidget {
                           .push(context,
                               MaterialPageRoute(builder: (BuildContext context) => ProductPage(products[index])))
                           .then((delete) {
-                        deleteHandler(index);
+                        if (delete) {
+                          deleteHandler(index);
+                        }
                       }))
             ],
           )

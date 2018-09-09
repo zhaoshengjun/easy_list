@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 class ProductPage extends StatelessWidget {
@@ -8,6 +10,7 @@ class ProductPage extends StatelessWidget {
     return WillPopScope(
         onWillPop: () {
           Navigator.pop(context, false);
+          return Future.value(false);
         },
         child: Scaffold(
             appBar: AppBar(
