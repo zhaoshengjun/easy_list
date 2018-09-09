@@ -18,8 +18,12 @@ class Products extends StatelessWidget {
             children: <Widget>[
               FlatButton(
                   child: Text('Details'),
-                  onPressed: () => Navigator.push(
-                      context, MaterialPageRoute(builder: (BuildContext context) => ProductPage(products[index]))))
+                  onPressed: () => Navigator
+                          .push(context,
+                              MaterialPageRoute(builder: (BuildContext context) => ProductPage(products[index])))
+                          .then((delete) {
+                        print(delete);
+                      }))
             ],
           )
         ],
