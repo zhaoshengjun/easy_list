@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
-import './pages/product.dart';
+import './product.dart';
 
-class Products extends StatelessWidget {
+class ProductsPage extends StatelessWidget {
   final List<Map> products;
   final Function deleteHandler;
 
-  Products({this.products, this.deleteHandler});
+  ProductsPage({this.products, this.deleteHandler});
 
   Widget _buildProductItem(BuildContext context, int index) {
     return Card(

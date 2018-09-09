@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'products.dart';
+import './pages/products.dart';
 import 'product_control.dart';
 
 class ProductManager extends StatefulWidget {
@@ -42,7 +42,7 @@ class _ProductManagerState extends State<ProductManager> {
     return Column(
       children: <Widget>[
         Container(margin: EdgeInsets.all(5.0), child: ProductControl(_addProduct)),
-        Expanded(child: Products(products: _products, deleteHandler: _deleteProduct))
+        Expanded(child: ProductsPage(products: _products, deleteHandler: _deleteProduct))
       ],
     );
   }
