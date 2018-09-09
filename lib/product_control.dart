@@ -7,7 +7,7 @@ class ProductControl extends StatelessWidget {
   Widget build(BuildContext context) {
     return RaisedButton(
       onPressed: () {
-        addHanlder('Sweets');
+        addHanlder({'title': 'Sweets', 'image': 'assets/food.jpg'});
       },
       child: Text('Add Product'),
     );
