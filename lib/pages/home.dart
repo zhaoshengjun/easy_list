@@ -9,7 +9,10 @@ class HomePage extends StatelessWidget {
         drawer: Drawer(
             child: Column(
           children: <Widget>[
-            AppBar(title: Text('Choose')),
+            AppBar(
+              title: Text('Choose'),
+              automaticallyImplyLeading: false,
+            ),
             ListTile(
               title: Text('Manage Product'),
               onTap: () {},
