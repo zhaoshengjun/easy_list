@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 import './products.dart';
+import './product_create.dart';
+import './product_list.dart';
 
 class ProductsAdminPage extends StatelessWidget {
   @override
@@ -36,7 +38,9 @@ class ProductsAdminPage extends StatelessWidget {
               ],
             ),
           ),
-          body: Center(child: Text('Manage your products')),
+          body: TabBarView(
+            children: <Widget>[ProductCreatePage(), ProductListPage()],
+          ),
         ));
   }
 }
