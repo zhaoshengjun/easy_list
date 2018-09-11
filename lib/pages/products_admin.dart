@@ -26,9 +26,11 @@ class ProductsAdminPage extends StatelessWidget {
             bottom: TabBar(
               tabs: <Widget>[
                 Tab(
+                  icon: Icon(Icons.create),
                   text: 'Create Product',
                 ),
                 Tab(
+                  icon: Icon(Icons.list),
                   text: 'My Products',
                 )
               ],
