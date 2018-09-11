@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import './pages/auth.dart';
+import './pages/products_admin.dart';
 
 main() => runApp(MyApp());
 
@@ -10,6 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(brightness: Brightness.light, primaryColor: Colors.deepOrange, accentColor: Colors.deepPurple),
       home: AuthPage(),
+      routes: {'admin': (BuildContext context) => ProductsAdminPage()},
     );
   }
 }
