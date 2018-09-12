@@ -30,24 +30,27 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(brightness: Brightness.light, primaryColor: Colors.deepOrange, accentColor: Colors.deepPurple),
-      // home: AuthPage(),
-      routes: {
-        '/': (BuildContext context) => ProductsPage(_products, _addProduct, _deleteProduct),
-        'admin': (BuildContext context) => ProductsAdminPage()
-      },
-      onGenerateRoute: (RouteSettings settings) {
-        final List<String> pathElements = settings.name.split('/');
-        if (pathElements[0] != '') {
-          return null;
-        }
+        theme: ThemeData(brightness: Brightness.light, primaryColor: Colors.deepOrange, accentColor: Colors.deepPurple),
+        // home: AuthPage(),
+        routes: {
+          '/': (BuildContext context) => ProductsPage(_products, _addProduct, _deleteProduct),
+          'admin': (BuildContext context) => ProductsAdminPage()
+        },
+        onGenerateRoute: (RouteSettings settings) {
+          final List<String> pathElements = settings.name.split('/');
+          if (pathElements[0] != '') {
+            return null;
+          }
 
-        if (pathElements[1] == 'product') {
-          final int index = int.parse(pathElements[2]);
-          return MaterialPageRoute<bool>(builder: (BuildContext context) => ProductPage(_products[index]));
-        }
-        return null;
-      },
-    );
+          if (pathElements[1] == 'product') {
+            final int index = int.parse(pathElements[2]);
+            return MaterialPageRoute<bool>(builder: (BuildContext context) => ProductPage(_products[index]));
+          }
+          return null;
+        },
+        onUnknownRoute: (RouteSettings settings) {
+          return MaterialPageRoute(
+              builder: (BuildContext context) => ProductsPage(_products, _addProduct, _deleteProduct));
+        });
   }
 }
