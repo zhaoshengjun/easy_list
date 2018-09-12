@@ -2,6 +2,32 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
+void _showWarningDialog(BuildContext context) {
+  showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text('Confirm'),
+          content: Text('This action cannot be undone!'),
+          actions: <Widget>[
+            FlatButton(
+              child: Text('Delete'),
+              onPressed: () {
+                Navigator.pop(context);
+                Navigator.pop(context, true);
+              },
+            ),
+            FlatButton(
+              child: Text('Discard'),
+              onPressed: () {
+                Navigator.pop(context);
+              },
+            )
+          ],
+        );
+      });
+}
+
 class ProductPage extends StatelessWidget {
   final Map product;
   ProductPage(this.product);
@@ -28,7 +54,7 @@ class ProductPage extends StatelessWidget {
                     child: RaisedButton(
                       color: Theme.of(context).accentColor,
                       child: Text('Delete'),
-                      onPressed: () => Navigator.pop(context, true),
+                      onPressed: () => _showWarningDialog(context),
                     ))
               ],
             ))));
