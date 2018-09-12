@@ -28,6 +28,7 @@ class _ProductCreatePageState extends State<ProductCreatePage> {
             ),
             TextField(
               maxLines: 4,
+              decoration: InputDecoration(labelText: 'Product Description'),
               onChanged: (String value) {
                 setState(() {
                   description = value;
@@ -35,6 +36,7 @@ class _ProductCreatePageState extends State<ProductCreatePage> {
               },
             ),
             TextField(
+              decoration: InputDecoration(labelText: 'Product Price'),
               keyboardType: TextInputType.number,
               onChanged: (String value) {
                 setState(() {
