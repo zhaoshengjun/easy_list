@@ -43,6 +43,10 @@ class _ProductCreatePageState extends State<ProductCreatePage> {
                   price = double.parse(value);
                 });
               },
+            ),
+            RaisedButton(
+              child: Text('Save'),
+              onPressed: () {},
             )
           ],
         ));
