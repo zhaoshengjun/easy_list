@@ -16,7 +16,7 @@ class ProductsPage extends StatelessWidget {
             padding: EdgeInsets.only(top: 10.0),
             child: Text(
               products[index]['title'],
-              style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold, fontFamily: 'Googls Sans'),
             ),
           ),
           ButtonBar(
