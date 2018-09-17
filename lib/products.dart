@@ -14,7 +14,7 @@ class ProductsPage extends StatelessWidget {
           Image.asset(products[index]['image']),
           Container(
               padding: EdgeInsets.only(top: 10.0),
-              child: Row(children: <Widget>[
+              child: Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
                 Text(
                   products[index]['title'],
                   style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold, fontFamily: 'Googls Sans'),
