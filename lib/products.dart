@@ -13,12 +13,14 @@ class ProductsPage extends StatelessWidget {
         children: <Widget>[
           Image.asset(products[index]['image']),
           Container(
-            padding: EdgeInsets.only(top: 10.0),
-            child: Text(
-              products[index]['title'],
-              style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold, fontFamily: 'Googls Sans'),
-            ),
-          ),
+              padding: EdgeInsets.only(top: 10.0),
+              child: Row(children: <Widget>[
+                Text(
+                  products[index]['title'],
+                  style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold, fontFamily: 'Googls Sans'),
+                ),
+                Text(products[index]['price'].toString()),
+              ])),
           ButtonBar(
             alignment: MainAxisAlignment.center,
             children: <Widget>[
