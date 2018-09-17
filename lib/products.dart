@@ -27,7 +27,7 @@ class ProductsPage extends StatelessWidget {
                     decoration:
                         BoxDecoration(color: Theme.of(context).accentColor, borderRadius: BorderRadius.circular(5.0)),
                     child: Text(
-                      products[index]['price'].toString(),
+                      '\$' + products[index]['price'].toString(),
                       style: TextStyle(color: Colors.white),
                     )),
               ])),
