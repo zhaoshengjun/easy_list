@@ -19,6 +19,9 @@ class ProductsPage extends StatelessWidget {
                   products[index]['title'],
                   style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold, fontFamily: 'Googls Sans'),
                 ),
+                SizedBox(
+                  width: 8.0,
+                ),
                 Text(products[index]['price'].toString()),
               ])),
           ButtonBar(
