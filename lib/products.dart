@@ -22,7 +22,9 @@ class ProductsPage extends StatelessWidget {
                 SizedBox(
                   width: 8.0,
                 ),
-                Text(products[index]['price'].toString()),
+                DecoratedBox(
+                    decoration: BoxDecoration(color: Theme.of(context).accentColor),
+                    child: Text(products[index]['price'].toString())),
               ])),
           ButtonBar(
             alignment: MainAxisAlignment.center,
