@@ -31,6 +31,13 @@ class ProductsPage extends StatelessWidget {
                       style: TextStyle(color: Colors.white),
                     )),
               ])),
+          DecoratedBox(
+            decoration: BoxDecoration(
+                border: Border.all(color: Colors.grey, width: 1.0), borderRadius: BorderRadius.circular(6.0)),
+            child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 6.0, vertical: 2.5),
+                child: Text('Union Square, San Francisco')),
+          ),
           ButtonBar(
             alignment: MainAxisAlignment.center,
             children: <Widget>[
