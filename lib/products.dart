@@ -15,11 +15,12 @@ class ProductsPage extends StatelessWidget {
           Container(
               padding: EdgeInsets.only(top: 10.0),
               child: Row(mainAxisAlignment: MainAxisAlignment.center, children: <Widget>[
-                Expanded(
+                Flexible(
+                    fit: FlexFit.tight,
                     child: Text(
-                  products[index]['title'],
-                  style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold, fontFamily: 'Googls Sans'),
-                )),
+                      products[index]['title'],
+                      style: TextStyle(fontSize: 26.0, fontWeight: FontWeight.bold, fontFamily: 'Googls Sans'),
+                    )),
                 SizedBox(
                   width: 8.0,
                 ),
