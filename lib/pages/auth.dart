@@ -24,14 +24,28 @@ class _AuthPageState extends State<AuthPage> {
             children: <Widget>[
               TextField(
                 decoration: InputDecoration(labelText: 'eMail'),
-                onChanged: (String value) {},
+                onChanged: (String value) {
+                  setState(() {
+                    _email = value;
+                  });
+                },
               ),
               TextField(
                 decoration: InputDecoration(labelText: 'Password'),
-                onChanged: (String value) {},
+                onChanged: (String value) {
+                  setState(() {
+                    _password = value;
+                  });
+                },
               ),
               SwitchListTile(
                 title: Text('Accept Terms'),
+                value: _acceptTerms,
+                onChanged: (bool value) {
+                  setState(() {
+                    _acceptTerms = value;
+                  });
+                },
               ),
               SizedBox(
                 height: 10.0,
@@ -39,6 +53,9 @@ class _AuthPageState extends State<AuthPage> {
               RaisedButton(
                 child: Text('Login'),
                 onPressed: () {
+                  print(_email);
+                  print(_password);
+                  print(_acceptTerms);
                   Navigator.pushReplacementNamed(context, '/');
                 },
               ),
