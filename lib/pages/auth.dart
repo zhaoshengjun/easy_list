@@ -56,7 +56,7 @@ class _AuthPageState extends State<AuthPage> {
                   print(_email);
                   print(_password);
                   print(_acceptTerms);
-                  Navigator.pushReplacementNamed(context, '/');
+                  Navigator.pushReplacementNamed(context, '/products');
                 },
               ),
             ],
