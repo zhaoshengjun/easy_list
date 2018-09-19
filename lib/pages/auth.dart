@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
 
-import './products.dart';
+class AuthPage extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return _AuthPageState();
+  }
+}
 
-class AuthPage extends StatelessWidget {
+class _AuthPageState extends State<AuthPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
