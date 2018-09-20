@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
-// import './pages/auth.dart';
+import './pages/auth.dart';
 import './pages/products_admin.dart';
 import './pages/products.dart';
 import './pages/product.dart';
 
 void main() {
-  debugPaintSizeEnabled = true;
+  // debugPaintSizeEnabled = true;
   runApp(MyApp());
 }
 
@@ -39,10 +39,10 @@ class _MyAppState extends State<MyApp> {
             primaryColor: Colors.deepOrange,
             accentColor: Colors.deepPurple,
             fontFamily: "Google Sans"),
-        // home: AuthPage(),
         routes: {
-          '/': (BuildContext context) => ProductsPage(_products),
-          'admin': (BuildContext context) => ProductsAdminPage(_addProduct, _deleteProduct)
+          '/': (context) => AuthPage(),
+          '/products': (BuildContext context) => ProductsPage(_products),
+          '/admin': (BuildContext context) => ProductsAdminPage(_addProduct, _deleteProduct)
         },
         onGenerateRoute: (RouteSettings settings) {
           final List<String> pathElements = settings.name.split('/');
