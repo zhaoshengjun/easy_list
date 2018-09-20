@@ -54,6 +54,8 @@ class _AuthPageState extends State<AuthPage> {
               ),
               RaisedButton(
                 child: Text('Login'),
+                color: Theme.of(context).primaryColor,
+                textColor: Colors.white,
                 onPressed: () {
                   print(_email);
                   print(_password);
