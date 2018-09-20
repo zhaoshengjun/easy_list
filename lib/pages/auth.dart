@@ -21,7 +21,7 @@ class _AuthPageState extends State<AuthPage> {
       body: Container(
           decoration:
               BoxDecoration(image: DecorationImage(fit: BoxFit.cover, image: AssetImage('assets/background.jpg'))),
-          margin: EdgeInsets.all(10.0),
+          padding: EdgeInsets.all(10.0),
           child: ListView(
             children: <Widget>[
               TextField(
