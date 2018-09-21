@@ -28,7 +28,7 @@ class _AuthPageState extends State<AuthPage> {
           child: ListView(
             children: <Widget>[
               TextField(
-                decoration: InputDecoration(labelText: 'eMail'),
+                decoration: InputDecoration(labelText: 'eMail', filled: true, fillColor: Colors.white),
                 onChanged: (String value) {
                   setState(() {
                     _email = value;
