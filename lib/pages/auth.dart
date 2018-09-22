@@ -36,7 +36,7 @@ class _AuthPageState extends State<AuthPage> {
                 },
               ),
               TextField(
-                decoration: InputDecoration(labelText: 'Password'),
+                decoration: InputDecoration(labelText: 'Password', filled: true, fillColor: Colors.white),
                 obscureText: true,
                 onChanged: (String value) {
                   setState(() {
