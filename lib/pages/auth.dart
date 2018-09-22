@@ -35,6 +35,9 @@ class _AuthPageState extends State<AuthPage> {
                   });
                 },
               ),
+              SizedBox(
+                height: 10.0,
+              ),
               TextField(
                 decoration: InputDecoration(labelText: 'Password', filled: true, fillColor: Colors.white),
                 obscureText: true,
